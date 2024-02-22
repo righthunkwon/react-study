@@ -32,14 +32,20 @@ function timer(time) {
     }, time);
   });
 }
-async function run() {
-  console.log("start");
+async function runTimer() {
+  console.log("timer start");
   let time = await timer(1000);
-  console.log("time" + time);
+  console.log("time " + time);
   time = await timer(time + 1000);
-  console.log("time" + time);
+  console.log("time " + time);
   time = await timer(time + 1000);
-  console.log("time" + time);
-  console.log("end");
+  console.log("time " + time);
+  console.log("timer end");
 }
-run();
+
+async function runApp() {
+  console.log("App start");
+  await runTimer();
+  console.log("App end");
+}
+runApp();
