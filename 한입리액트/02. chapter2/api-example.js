@@ -17,29 +17,3 @@ async function getData() {
   console.log(jsonResponse);
 }
 getData();
-
-// 1. Call back
-// timer(1000)
-//   .then(function() {
-//     console.log('작업');
-//     return timer(1000);
-//   })
-//   .then(function() {
-//     console.log('작업');
-//     return timer(1000);
-//   })
-//   .then(function() {
-//     console.log('작업');
-//     return timer(1000);
-//   });
-
-// 2. async & await
-// async function run() {
-//   await timer(1000);
-//   console.log("작업");
-//   await timer(1000);
-//   console.log("작업");
-//   await timer(1000);
-//   console.log("작업");
-// }
-// run();
