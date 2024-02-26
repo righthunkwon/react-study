@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "emotion-diary-winterlood",
+    "site": "righthun-react-project",
     "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [

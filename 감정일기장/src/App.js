@@ -1,8 +1,8 @@
 import React, { useEffect, useReducer, useRef } from "react";
-
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+// Router & Pages
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import New from "./pages/New";
 import Edit from "./pages/Edit";
@@ -96,6 +96,7 @@ function App() {
           onRemove,
         }}
       >
+        {/* Router & Pages */}
         <BrowserRouter>
           <div className="App">
             <Routes>

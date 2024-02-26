@@ -10,12 +10,14 @@ body {
   margin: 0px;
 }
 
+/* 화면의 최소 너비가 650px 이상일 경우 적용 */
 @media (min-width: 650px) {
   .App {
     width: 640px;
   }
 }
 
+/* 화면의 최대 너비가 650px 이하일 경우 적용 */
 @media (max-width: 650px) {
   .App {
     width: 90vw;

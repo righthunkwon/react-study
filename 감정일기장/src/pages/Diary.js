@@ -13,6 +13,7 @@ const Diary = () => {
   const navigate = useNavigate();
   const [data, setData] = useState();
 
+  // 페이지가 처음으로 렌더링 될 때 index.html title 수정
   useEffect(() => {
     const titleElement = document.getElementsByTagName("title")[0];
     titleElement.innerHTML = `감정 일기장 - ${id}번 일기`;
