@@ -1,22 +1,15 @@
-// 함수
-let area1 = getArea(10, 20);
-console.log(area1);
+// 함수 호출(인수)
+let area = getArea(10, 20);
+console.log(area1); // 200
 
-let area2 = getArea(30, 20);
-console.log(area2);
-
-getArea(120, 200);
-
-// 호이스팅
-// 끌어올리다 라는 뜻
+// 함수 선언식(매개변수) - 호이스팅
 function getArea(width, height) {
-  function another() {
-    // 중첩 함수
-    console.log('another');
+  // 중첩 함수
+  function nestedFunc() {
+    console.log('중첩함수 호출');
   }
+  nestedFunc();
 
-  another();
   let area = width * height;
-
   return area;
 }
