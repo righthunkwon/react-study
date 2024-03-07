@@ -1,0 +1,11 @@
+{
+  "name": "example1",
+  "version": "1.0.0",
+  "description": "## 섹션별 코드",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
