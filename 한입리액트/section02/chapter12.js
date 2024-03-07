@@ -1,7 +1,7 @@
 // 음식을 주문하는 상황
 function orderFood(callback) {
   setTimeout(() => {
-    const food = "떡볶이";
+    const food = '떡볶이';
     callback(food);
   }, 3000);
 }
@@ -20,6 +20,7 @@ function freezeFood(food, callback) {
   }, 1500);
 }
 
+// 콜백지옥 발생
 orderFood((food) => {
   console.log(food);
 

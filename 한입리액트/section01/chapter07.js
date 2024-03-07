@@ -6,7 +6,7 @@ let num1 = 3 + 2;
 let num2 = 3 - 2;
 let num3 = 3 * 2;
 let num4 = 3 / 2;
-let num5 = 3 % 2; // 모듈러
+let num5 = 3 % 2; // %: 모듈러
 let num6 = (1 + 2) * 10; // 30
 
 // 3. 복합 대입 연산자

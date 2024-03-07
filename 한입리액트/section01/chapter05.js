@@ -18,7 +18,7 @@ let isEmpty = true;
 let isSwitchOn = false;
 
 // 4. Null Type
-let empty = null; // 명시적으로 선언
+let empty = null; // 명시적으로 선언 필요
 
 // 5. Undefined Type
 let none;

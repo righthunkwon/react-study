@@ -22,7 +22,7 @@ function printName(person) {
     console.log('person의 값이 없음');
     return;
   }
-  // 예제2 (falsy를 활용하여 코드 간결화)
+  // 예제2 (falsy를 활용한 코드 간결화)
   if (!person) {
     console.log('person의 값이 없음');
     return;

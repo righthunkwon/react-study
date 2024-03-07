@@ -31,6 +31,6 @@ person['favoriteFood'] = '초콜릿';
 delete person.job;
 delete person['favoriteFood'];
 
-// 3.5 프로퍼티의 존재 유무를 확인하는 방법 (in 연산자)
+// 3.5 객체에서 프로퍼티의 존재 유무를 확인하는 방법 (in 연산자)
 let result1 = 'name' in person; // true
 let result2 = 'cat' in person; // false
