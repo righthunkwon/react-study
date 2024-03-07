@@ -1,13 +1,10 @@
 function add10(num) {
   const promise = new Promise((resolve, reject) => {
-    // 비동기 작업 실행하는 함수
-    // executor
-
     setTimeout(() => {
       if (typeof num === 'number') {
-        resolve(num + 10);
+        resolve(num + 10); // 비동기 작업이 성공했을 경우 실행
       } else {
-        reject('num이 숫자가 아닙니다');
+        reject('num이 숫자가 아닙니다'); // 비동기 작업이 실패했을 경우 실행
       }
     }, 2000);
   });
@@ -28,20 +25,25 @@ function add10(num) {
  * 비동기 작업이 대기상태였다가 성공되면 resolve
  * 비동기 작업이 대기상태였다가 실패하면 reject
  *
+ * Promise 객체의 반환값은 Promise이므로
+ * 이를 then과 catch로 체이닝하여 사용할 수 있음
+ *
+ * catch의 경우 중간에 에러가 발생하면
+ * 사이의 then을 실행하지 않고 바로 실행됨
  *  */
 
 add10(0)
   .then((result) => {
-    console.log(result);
+    console.log(result); // 10
     return add10(result);
   })
   .then((result) => {
-    console.log(result);
+    console.log(result); // 20
     return add10(undefined);
   })
   .then((result) => {
-    console.log(result);
+    console.log(result); // 30
   })
   .catch((error) => {
-    console.log(error);
+    console.log(error); // num이 숫자가 아닙니다
   });
