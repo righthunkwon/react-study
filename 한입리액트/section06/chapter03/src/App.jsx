@@ -1,8 +1,12 @@
-import "./App.css";
-import Viewer from "./components/Viewer";
-import Controller from "./components/Controller";
-import { useState } from "react";
+import './App.css';
+import Viewer from './components/Viewer';
+import Controller from './components/Controller';
+import { useState } from 'react';
 
+// App (parent)
+// Viewer, Controller (child)
+// State & Props - One way transmission
+// So, you should handle state at PARENT COMPONENT(App)!
 function App() {
   const [count, setCount] = useState(0);
 
@@ -11,11 +15,13 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Simple Counter</h1>
+
       <section>
         <Viewer count={count} />
       </section>
+
       <section>
         <Controller onClickButton={onClickButton} />
       </section>
