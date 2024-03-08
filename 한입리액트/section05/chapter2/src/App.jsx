@@ -1,8 +1,10 @@
-import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import './App.css';
+import Header from './components/Header'; // child
+import Main from './components/Main'; // child
+import Footer from './components/Footer'; // child
 
+// Root component(parent)
+// rendered by main.jsx
 function App() {
   return (
     <>
