@@ -4,7 +4,7 @@
 }
 
 .Editor input {
-  flex: 1;
+  flex: 1; /* 부모 요소의 크기를 벗어나지 않는 선에서 최대 크기만큼 설정 */
   padding: 15px;
   border: 1px solid rgb(220, 220, 220);
   border-radius: 5px;

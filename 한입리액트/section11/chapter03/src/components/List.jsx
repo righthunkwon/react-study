@@ -1,49 +1,44 @@
-import "./List.css";
-import TodoItem from "./TodoItem";
-import { useState, useMemo, useContext } from "react";
-import { TodoContext } from "../App";
+import './List.css';
+import TodoItem from './TodoItem';
+import { useState, useMemo, useContext } from 'react';
+import { TodoStateContext } from '../App';
 
 const List = () => {
-  const { todos } = useContext(TodoContext);
+  const todos = useContext(TodoStateContext); // Context에서 전달하는 값이 이제는 객체가 아니므로 구조분해할당을 하지 않음에 유의
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
   };
 
   const getFilteredData = () => {
-    if (search === "") {
+    if (search === '') {
       return todos;
     }
     return todos.filter((todo) =>
-      todo.content
-        .toLowerCase()
-        .includes(search.toLowerCase())
+      todo.content.toLowerCase().includes(search.toLowerCase())
     );
   };
 
   const filteredTodos = getFilteredData();
 
-  const { totalCount, doneCount, notDoneCount } =
-    useMemo(() => {
-      console.log("getAnalyzedData 호출!");
-      const totalCount = todos.length;
-      const doneCount = todos.filter(
-        (todo) => todo.isDone
-      ).length;
-      const notDoneCount = totalCount - doneCount;
+  const { totalCount, doneCount, notDoneCount } = useMemo(() => {
+    console.log('getAnalyzedData 호출!');
+    const totalCount = todos.length;
+    const doneCount = todos.filter((todo) => todo.isDone).length;
+    const notDoneCount = totalCount - doneCount;
 
-      return {
-        totalCount,
-        doneCount,
-        notDoneCount,
-      };
-    }, [todos]);
+    return {
+      totalCount,
+      doneCount,
+      notDoneCount,
+    };
+  }, [todos]);
   // 의존성배열 : deps
 
   return (
-    <div className="List">
+    <div className='List'>
       <h4>Todo List 🌱</h4>
       <div>
         <div>total: {totalCount}</div>
@@ -53,9 +48,9 @@ const List = () => {
       <input
         value={search}
         onChange={onChangeSearch}
-        placeholder="검색어를 입력하세요"
+        placeholder='검색어를 입력하세요'
       />
-      <div className="todos_wrapper">
+      <div className='todos_wrapper'>
         {filteredTodos.map((todo) => {
           return <TodoItem key={todo.id} {...todo} />;
         })}

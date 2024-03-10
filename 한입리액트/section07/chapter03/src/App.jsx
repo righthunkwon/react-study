@@ -28,9 +28,10 @@ function App() {
   });
 
   // 3. 언마운트 : 죽음
+  // Even 컴포넌트 내부에 기술
   // useEffect(() => {
   //   return () => {
-  //     console.log('unmoint');
+  //     console.log('unmount');
   //   };
   // });
 

@@ -1,23 +1,23 @@
 .List {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* 요소 간 간격 설정 */
 }
 
 .List > input {
   width: 100%;
-  border: none;
-  border-bottom: 1px solid rgb(220, 220, 220);
-  padding: 15px 0px;
+  border: none; /* 전체 경계선를 없앤 뒤, */
+  border-bottom: 1px solid rgb(220, 220, 220); /* 하단 경계선만 생성 */
+  padding: 15px 0px; /* 상하 15px 여백, 좌우 0px 여백 */
 }
 
 .List > input:focus {
-  outline: none;
-  border-bottom: 1px solid rgb(37, 147, 255);
+  outline: none; /* input 태그가 포커스 되었을 때 전체 경계선을 없앤 뒤, */
+  border-bottom: 1px solid rgb(37, 147, 255); /* 하단 경계선만 생성 */
 }
 
 .List .todos_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* 요소 간 간격 설정 */
 }

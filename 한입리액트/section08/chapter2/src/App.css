@@ -1,6 +1,6 @@
 .App {
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto; /* 가운데 정렬 */
 
   display: flex;
   flex-direction: column;

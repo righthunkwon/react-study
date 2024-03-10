@@ -1,8 +1,10 @@
-import { useRef, useState } from "react";
-import "./Editor.css";
+import { useRef, useState, useContext } from 'react';
+import { TodoContext } from '../App';
+import './Editor.css';
 
-const Editor = ({ onCreate }) => {
-  const [content, setContent] = useState("");
+const Editor = () => {
+  const { onCreate } = useContext(TodoContext); // React Context를 통한 데이터 전달
+  const [content, setContent] = useState('');
   const inputRef = useRef();
 
   const onChangeContent = (e) => {
@@ -16,22 +18,22 @@ const Editor = ({ onCreate }) => {
   };
 
   const onSubmit = () => {
-    if (content === "") {
+    if (content === '') {
       inputRef.current.focus();
       return;
     }
     onCreate(content);
-    setContent("");
+    setContent('');
   };
 
   return (
-    <div className="Editor">
+    <div className='Editor'>
       <input
         ref={inputRef}
         value={content}
         onChange={onChangeContent}
         onKeyDown={onKeydown}
-        placeholder="새로운 Todo..."
+        placeholder='새로운 Todo...'
       />
       <button onClick={onSubmit}>추가</button>
     </div>
