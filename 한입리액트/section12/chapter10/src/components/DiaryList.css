@@ -15,5 +15,5 @@
 }
 
 .DiaryList .menu_bar button {
-  flex: 1;
+  flex: 1; /* 너비를 할 수 있는 만큼 최대로 늘림 */
 }
